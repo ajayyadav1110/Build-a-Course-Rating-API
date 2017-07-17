@@ -21,7 +21,7 @@ router.get("/", function (req, res, next) {
 
 
 router.get("/:courseId", function (req, res, next) {
-    Course.findById(req.params.id).
+    Course.findById(req.params.courseId).
   populate('user', 'fullName').
     populate({
       path: 'reviews',
